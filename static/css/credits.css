@@ -1,0 +1,77 @@
+/* Styles for Image Credits */
+.top-center {
+  z-index:10;
+  position: fixed;
+  top: 0;
+  left:50%;
+}
+.bottom-right {
+  z-index:10;
+  position: fixed;
+  bottom: 0;
+  right;0;
+}
+.fa-info-circle {
+  color:white;
+  font-size:1.3em;
+}
+#credits-box {
+  z-index: 10;  position:absolute;
+  bottom:1em;
+  right:1em;
+}
+.credits {
+  background-color:white;
+  font-family:sans-serif;
+  display:inline-block;
+      font-size: 0.8em;
+    color: #888;
+    margin-left: 20px;
+/* position: absolute; */
+bottom: 0;
+right: 0;
+margin-top: -3px;
+padding: 0 5px;
+border-radius: 10px;
+}
+.new_line {
+  display: none;
+}
+@media all and (max-width: 420px) {
+  * {
+      touch-action: manipulation;
+  }
+  .fa-info-circle {
+    font-size:2.5em;
+  }
+  .credits, #credits-box i{
+    font-size:1.2rem;
+  }
+  .new_line {
+    display: block;
+  }
+}
+#credits-box a{
+  color:#888;
+}
+.out {
+  position: absolute;
+right: 0;
+bottom: -3px;
+}
+.info {
+  -webkit-transition: all 1.3s linear 0s;
+  transition: all 1.3s linear 0s;
+  visibility:visible;
+  opacity:1;
+  /*display:block;*/
+}
+.info.fade_out {
+	visibility:hidden;
+  opacity:0;
+}
+.font-credits{
+  line-height: 0.7rem;
+      margin: 0.6rem 0.2rem;
+      font-size: medium;
+}

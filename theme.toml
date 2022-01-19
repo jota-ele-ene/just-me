@@ -1,0 +1,11 @@
+name = "Just me"
+license = "MIT"
+licenselink = "Link to theme's license"
+description = "A minimal and fancy theme for Hugo to create Personal Pages just with awesome backgrounds and your social profiles"
+homepage = "https://github.com/jota-ele-ene/just-me"
+tags = ["personal page", "backgrounds"]
+features = ["social profiles", "rotating backgrounds"]
+min_version = "0.59.1"
+[author]
+    name = "José Luis Núñez"
+    homepage = "https://joseluisnuñez.es"

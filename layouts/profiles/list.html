@@ -1,0 +1,8 @@
+<!-- Set weight param in front matter to order-->
+<div class="ca-more">
+   <ul class="ca-menu extra_margin_left_row1">
+     {{ range .Pages.ByWeight }}
+       {{ .Render "summary"}}
+     {{ end }}
+  </ul>
+</div>

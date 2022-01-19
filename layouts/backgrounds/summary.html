@@ -1,0 +1,26 @@
+<div class="container_bg fade_out" refer="second" size="{{ .Params.imageSize }}">
+  <div class="image image_fadedOut" style="background-image: url('{{ .Params.imageUrl }}')" rel="nofollow" download=""></div>
+  {{ if or .Params.imageCredits .Params.imageOrigin }}
+    <div id="credits-box">
+      <div class="out info" onclick="toggle_info()"><i class="fas fa-info-circle"></i></div>
+      <div class="credits info fade_out" onclick="toggle_info()">
+        <div class="font-credits">
+          {{ if .Params.imageOrigin }}
+            <span>Background credits: </span><span class="new_line"><br></span>
+              {{ if .Params.location }}
+                <span>{{ .Params.location }} </span>
+              {{ end }}
+              {{ if .Params.imageUserName  }}
+                <span>by <a href="{{ .Params.imageUserName }}" target="_blank">{{ .Params.imageFullName }}</a> </span>
+              {{ else if .Params.imageUserName }}
+                <span>by <a href="{{ .Params.imageUserName }}" target="_blank">@{{ .Params.imageUserName }}</a> </span>
+              {{ end }}
+            <span>available <a href="{{ .Params.imageOrigin }}" target="_blank">here</a></span>
+          {{ else }}
+            {{ .Params.imageCredits | safeHTML  }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>

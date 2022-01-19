@@ -1,0 +1,69 @@
+body,
+html {
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+body {
+	background: linear-gradient(20deg, #e7e3e3, #e7e3e3, #994, #993);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+.bg {
+  overflow: hidden;
+  /* Full height */
+  height: 100%;
+  /* The image used */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* zoom effect */
+  transition: all 5s ease;
+  -webkit-transition: all 5s ease;
+  -moz-transition: all 5s ease;
+  -o-transition: all 5s ease;
+}
+.image {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.container_bg {
+  -webkit-transition: all 1.8s linear 0s;
+  -moz-transition: all 1.8s linear 0s;
+  -o-transition: all 1.8s linear 0s;
+  transition: all 1.8s linear 0s;
+  visibility:visible;
+  opacity:1;
+}
+.container_bg.fade_out,
+.container_bg.not_fit {
+	visibility:hidden;
+  opacity:0;
+}
+@media all and (min-width: 1024px) {
+  .container_bg.bg_active:hover .image,
+  .container_bg.bg_active:focus .image {
+    transform: scale(1.2);
+  }
+  .container_bg .image {
+    transition: transform 8s;
+  }
+}

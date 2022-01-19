@@ -1,0 +1,27 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  line-height: 0;
+  width: 100%;
+}
+.copyright {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  font-family: monospace;
+}
+.copyright p a {
+  color: white;
+}
+@media all and (max-width: 420px) {
+  .copyright {
+    line-height: 1.22rem;
+    text-align: left;
+    margin-left: 1em;
+    font-size: 0.9em;
+  }
+  .copyright p a:first-child::after {
+    content: '\A'; white-space: pre;
+    background-color: yellow;
+  }
+}

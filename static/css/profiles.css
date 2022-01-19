@@ -1,0 +1,75 @@
+.ca-menu{
+    /* align-content: center; */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-direction: column; */
+    /* height: 200%; */
+    padding-inline: initial;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ca-menu li{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    float:left;
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-border-radius: 125px;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    -ms-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+.ca-menu li i {
+    color:white;
+}
+.ca-menu li a, .ca-menu li a{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #333;
+    position: relative;
+    margin-top:10px;
+}
+.ca-icon{
+    font-family: 'WebSymbolsRegular', cursive;
+    font-size: 1.4em;
+    color: #444;
+    position: absolute;
+    width: 106%;
+    text-align: center;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    -ms-transition: all 400ms linear;
+    transition: all 400ms linear;
+}
+.ca-icon img{
+    width: 45%;
+    margin-top: 0.2em;
+}
+.ca-menu li:hover .ca-icon {
+    font-size: 2.3em;
+}
+.ca-menu li:hover .ca-icon img {
+    width: 65%;
+}
+.ca-menu li:hover{
+    border-color: #fff;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.ca-menu li:hover a{
+    margin-top:0;
+}
+ .ca-menu li:hover .ca-icon{
+     font-size:2em;
+ }
+@media all and (max-width: 420px) {
+}

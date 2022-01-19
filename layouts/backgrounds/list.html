@@ -1,0 +1,10 @@
+<div class="bg">
+
+<!-- Adding default backgrounds in content -->
+{{ range .Pages.ByWeight }}
+  {{ .Render "summary"}}
+{{ end }}
+
+</div>
+
+<script src="{{ "js/background.js" | relURL }}"></script>

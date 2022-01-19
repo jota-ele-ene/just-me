@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+  <div class="title-div">
+    <div class="title">
+        <span>{{ .Title }}</span>
+    </div>
+    <div class="subtitle">
+        <span>{{ .Content }}</span>
+    </div>
+     {{ range where .Data.Pages "Section" "profiles" }}
+       {{ .Render "list"}}
+     {{ end }}
+  </div>
+
+  {{ range where .Data.Pages "Section" "backgrounds" }}
+    {{ .Render "list"}}
+  {{ end }}
+
+{{ end }}

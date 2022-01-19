@@ -1,0 +1,14 @@
+# REMOVE THIS
+themesDir = "../../"
+
+# DO NOT REMOVE THIS
+theme = "just-me"
+
+# Override these settings with your own
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Just me: Example Site"
+
+[params]
+  author = "John Doe"
+  author_link = "#"

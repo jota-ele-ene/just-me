@@ -1,0 +1,14 @@
+<div class="copyright">
+    <p>© {{ now.Year }}
+      {{ if isset .Site.Params "author"}}
+        by
+        {{ if (isset .Site.Params "author_link") }}
+          <a target="_blank" rel="noopener noreferrer" href="{{ .Site.Params.author_link }}">{{ .Site.Params.author }}</a>
+        {{ else }}
+          {{ .Site.Params.author }}
+        {{ end }}
+      {{end}}
+      using {{ i18n "powered" }} <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a> with {{ i18n "theme" }} <a target="_blank" rel="noopener noreferrer" href="https://github.com/jota-ele-ene/hugo-theme-justme">JustMe</a>.<br>
+    </p>
+</div>
+{{ partial "footer/footer-extra.html" . }}

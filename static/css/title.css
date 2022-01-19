@@ -1,0 +1,50 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Quantico");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:wght@600&display=swap");
+
+.title-div {
+  margin: 10% auto;
+  text-align: center;
+  border: 4px;
+  width: 40%;
+  padding: 1em;
+  position: relative;
+  z-index:1;
+}
+.title {
+  color:white;
+  position: relative;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 4rem;
+  z-index:10;
+}
+.subtitle {
+  color:white;
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  font-family: monospace;
+  z-index:10;
+  line-height: initial;
+}
+.subtitle a {
+  color: white;
+}
+.background--light, .background--complex {
+  background: rgba(25, 25, 25, .55);
+  -webkit-transition: background 2.5s linear 1.8s;
+  -moz-transition: background 2.5s linear 1.8s;
+  -o-transition: background 2.5s linear 1.8s;
+  transition: background 2.5s linear 1.8s;
+}
+.background--dark {
+  -webkit-transition: background 2.5s linear 1.8s;
+  -moz-transition: background 2.5s linear 1.8s;
+  -o-transition: background 2.5s linear 1.8s;
+  transition: background 2.5s linear 1.8s;
+}
+@media all and (max-width: 1024px) {
+  .title-div {
+    width: 80%;
+  }
+}
