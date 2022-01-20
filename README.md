@@ -28,13 +28,15 @@ If you already had a site running, change the `theme` variable in your `config.t
   author_link = "#"
 ```
 
+You can also add the `ga_tracking_id` param and set your Google Analytics tag.
+
 **Just me!** theme only renders the home page. so, you should also include the `disableKinds` variable to specify which type of pages Hugo should not render. Unless you extend the theme in your site and override with your own templates, keep these values for `disableKinds`:
 
 ```
 disableKinds = ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
 ```
 
-If you don't have a `config.toml` file in your site yet, take a look inside the [`exampleSite`](https://github.com/jota-ele-ene/just-me/tree/master/exampleSite) folder of this theme. You'll find the config file [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) there. The folder also contais the minimum files required to set up your site and have it up & running. Besides the [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) you will find some contents in the `content` folder. Copy the `_index.md` file and the folders `backgrounds` and `profiles` to your site own `content` folder. 
+If you don't have a `config.toml` file in your site yet, take a look inside the [`exampleSite`](https://github.com/jota-ele-ene/just-me/tree/master/exampleSite) folder of this theme. You'll find the config file [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) there. The folder also contais the minimum files required to set up your site and have it up & running. Besides the [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) you will find some contents in the `content` folder. Copy the `_index.md` file and the folders `backgrounds` and `profiles` to your site own `content` folder.
 
 Don't forget to remove the first lines in `config.toml`. The variable `themesDir´ only is needed for running the example site.
 
@@ -97,12 +99,12 @@ Consider that:
     <i class="fab fa-github"></i>
     ```
 
-    To use it in your home page, set `profile: github` in the front-matter, removing the `fa-` prefix. 
+    To use it in your home page, set `profile: github` in the front-matter, removing the `fa-` prefix.
 
     If you can't find an icon in Font Awesome, you can provide your own image. Review the `content\profiles\blog.md` markdown file to see an example.
 
 4. Only the markdown files where front-matter param `draft` is set to `false` are shown in the homepage.
-then you can provide your own image.  of your new post. 
+then you can provide your own image.  of your new post.
 
 ### Favicon
 
