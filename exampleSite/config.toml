@@ -3,12 +3,15 @@ themesDir = "../../"
 
 # DO NOT REMOVE THIS
 theme = "just-me"
+# Just me! only renders the homepage, no section or other kinds
+disableKinds = ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
 
 # Override these settings with your own
 baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Just me: Example Site"
 
+"page", "home", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"
 [params]
   author = "John Doe"
   author_link = "#"
