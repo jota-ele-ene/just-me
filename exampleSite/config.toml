@@ -11,7 +11,7 @@ baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Just me: Example Site"
 
-"page", "home", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"
 [params]
   author = "John Doe"
   author_link = "#"
+  ga_tracking_id = ""
