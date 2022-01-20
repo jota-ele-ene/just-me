@@ -1,6 +1,6 @@
 name = "Just me"
 license = "MIT"
-licenselink = "Link to theme's license"
+licenselink = "https://github.com/jota-ele-ene/just-me/blob/main/LICENSE"
 description = "A minimal and fancy theme for Hugo to create Personal Pages just with awesome backgrounds and your social profiles"
 homepage = "https://github.com/jota-ele-ene/just-me"
 tags = ["personal page", "backgrounds"]
