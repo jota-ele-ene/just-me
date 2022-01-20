@@ -33,7 +33,7 @@ You can also add the `ga_tracking_id` param and set your Google Analytics tag.
 **Just me!** theme only renders the home page. so, you should also include the `disableKinds` variable to specify which type of pages Hugo should not render. Unless you extend the theme in your site and override with your own templates, keep these values for `disableKinds`:
 
 ```
-disableKinds = ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 ```
 
 If you don't have a `config.toml` file in your site yet, take a look inside the [`exampleSite`](https://github.com/jota-ele-ene/just-me/tree/master/exampleSite) folder of this theme. You'll find the config file [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) there. The folder also contais the minimum files required to set up your site and have it up & running. Besides the [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) you will find some contents in the `content` folder. Copy the `_index.md` file and the folders `backgrounds` and `profiles` to your site own `content` folder.

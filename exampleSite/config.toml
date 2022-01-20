@@ -4,7 +4,7 @@ themesDir = "../../"
 # DO NOT REMOVE THIS
 theme = "just-me"
 # Just me! only renders the homepage, no section or other kinds
-disableKinds = ["page", "section", "taxonomy", "term", "RSS", "sitemap"]
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
 # Override these settings with your own
 baseURL = "https://example.com"
