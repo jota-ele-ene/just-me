@@ -14,7 +14,13 @@ A minimal and fancy theme for [Hugo](http://gohugo.io/) to create Personal Pages
 
 ## Getting started
 
-Go to your Hugo project root folder and run:
+The easiest way to get started is to [import this theme in Forestry CMS](https://app.forestry.io/quick-start?repo=jota-ele-ene/just-me-starter&engine=hugo&version=0.81.0) in a single click
+
+<a href="https://app.forestry.io/quick-start?repo=jota-ele-ene/just-me-starter&engine=hugo&version=0.81.0">
+    <img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" />
+</a>
+
+If you prefer import it from the command line, go to your Hugo project root folder and run:
 
 ```bash
 git submodule add https://github.com/jota-ele-ene/just-me.git themes/just-me
