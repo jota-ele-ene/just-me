@@ -1,6 +1,6 @@
 # Just me!
 
-A minimal and fancy theme for [Hugo](http://gohugo.io/) to create Personal Pages with no blog or extra content, just awesome rotating backgrounds and your social profiles to allow people contact you.
+A minimal and fancy theme for [Hugo](http://gohugo.io/) to create Personal Pages with no blog or extra content, just awesome rotating backgrounds and your social profiles to allow people contact you. A demo site is deployed here: https://jota-ele-ene.github.io/just-me-starter.
 
 ![Just me! screenshot](/images/screenshot.png)
 
