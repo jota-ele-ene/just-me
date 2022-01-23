@@ -9,7 +9,7 @@ A minimal and fancy theme for [Hugo](http://gohugo.io/) to create Personal Pages
 - Just a homepage with rotating fullscreen backgrounds
 - Configure it including your social profiles
 - Manage both backgrounds and social profiles like any other content in Hugo to avoid hard-coding in config-files
-- Support for Google Analytics (in progress)
+- Support for Google Analytics
 - Contact form (in progress)
 
 ## Getting started
@@ -30,7 +30,7 @@ If you already had a site running, change the `theme` variable in your `config.t
 
 You can also add the `ga_tracking_id` param and set your Google Analytics tag.
 
-**Just me!** theme only renders the home page. so, you should also include the `disableKinds` variable to specify which type of pages Hugo should not render. Unless you extend the theme in your site and override with your own templates, keep these values for `disableKinds`:
+**Just me!** theme only renders the home page. So, you should also include the `disableKinds` variable to specify which type of pages Hugo should not render. Unless you extend the theme in your site and override with your own templates, keep these values for `disableKinds`:
 
 ```
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
@@ -38,13 +38,15 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
 If you don't have a `config.toml` file in your site yet, take a look inside the [`exampleSite`](https://github.com/jota-ele-ene/just-me/tree/master/exampleSite) folder of this theme. You'll find the config file [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) there. The folder also contais the minimum files required to set up your site and have it up & running. Besides the [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) you will find some contents in the `content` folder. Copy the `_index.md` file and the folders `backgrounds` and `profiles` to your site own `content` folder.
 
-Don't forget to remove the first lines in `config.toml`. The variable `themesDir´ only is needed for running the example site.
+Don't forget to remove the first lines in `config.toml`. The variable `themesDir` only is needed for running the example site.
 
 Finally, run:
 
 ```
 hugo server -D
 ```
+
+You' get your server up & running locally.
 
 ## Configuring the Home Page
 
@@ -75,7 +77,7 @@ Consider that:
     hugo new profiles/new-profile.md
     ```
 
-    Where `:new-profile.md` is the name of the markdown file for managing the new icon. This will execute the theme's `profiles` archetype to create a new markdown file with the following frontmatter:
+    Where `new-profile.md` is the name of the markdown file for managing the new icon. This will execute the theme's `profiles` archetype to create a new markdown file with the following frontmatter:
 
     ```md
     # Default profile frontmatter:
@@ -93,22 +95,21 @@ Consider that:
     image: ""
     ```
 
-3. There are two tipes of icons. Most commons are those where an icon exists in the [Font Awesome icon set](https://fontawesome.com/). If you can find the icon for your new profile there, fill in the `profile` variable in the front-matter. Usually, to use the Github icon, your HTML must include this code:
+3. There are two types of icons. Most common ones are those where an icon exists in the [Font Awesome icon set](https://fontawesome.com/). If you can find the icon for your new profile there, fill in the `profile` variable in the front-matter. For example, if you want to add your Github profile, an icon exists for **Github**. To use the Github icon everywhere, your HTML must include this code:
 
     ```
     <i class="fab fa-github"></i>
     ```
 
-    To use it in your home page, set `profile: github` in the front-matter, removing the `fa-` prefix.
+    To use it in your home page rendered with **Just-me!**, set `profile: github` in the front-matter, removing the `fa-` prefix.
 
     If you can't find an icon in Font Awesome, you can provide your own image. Review the `content\profiles\blog.md` markdown file to see an example.
 
 4. Only the markdown files where front-matter param `draft` is set to `false` are shown in the homepage.
-then you can provide your own image.  of your new post.
 
 ### Favicon
 
-To update favicon of the site, override the ones in `static/icons/` folder with your own.
+To update favicon of the site, override the ones in `static/icons/` folder with your own. You can also review the template `partials\head\icons.html` to undertand how they are included in your pages.
 
 ### Backgrounds
 
