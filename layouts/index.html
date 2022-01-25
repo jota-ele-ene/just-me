@@ -16,4 +16,17 @@
     {{ .Render "list"}}
   {{ end }}
 
+  <script type="text/javascript">
+
+    var orientation = getOrientation();
+    var b = document.getElementsByTagName("BODY")[0];
+    b.setAttribute("orientation", orientation);
+    window.addEventListener("resize", checkOrientation);
+
+    processOrientation();
+
+    next_bg();
+
+  </script>
+
 {{ end }}

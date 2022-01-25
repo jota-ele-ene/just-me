@@ -1,11 +1,3 @@
-var orientation = getOrientation();
-var b = document.getElementsByTagName("BODY")[0];
-b.setAttribute("orientation", orientation);
-window.addEventListener("resize", checkOrientation);
-
-processOrientation();
-
-next_bg();
 
 function next_bg() {
   var a = document.querySelector(".container_bg.bg_active");
@@ -20,6 +12,8 @@ function next_bg() {
   var x = document.querySelectorAll(".container_bg.fade_out")
   if (x.length>0) {
     var i = getRandomArbitrary(0,x.length-1);
+    var image = x[i].querySelector('.image');
+    image.style.backgroundImage = "url('"+image.getAttribute("refer");+"')";
     x[i].classList.toggle("fade_out");
     x[i].classList.toggle("fading");
     x[i].classList.toggle("bg_active");

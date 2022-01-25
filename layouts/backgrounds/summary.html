@@ -1,5 +1,5 @@
-<div class="container_bg fade_out" refer="second" size="{{ .Params.imageSize }}">
-  <div class="image image_fadedOut" style="background-image: url('{{ .Params.imageUrl }}')" rel="nofollow" download=""></div>
+<div class="container_bg fade_out" size="{{ .Params.imageSize }}">
+  <div class="image image_fadedOut" refer="{{ .Params.imageUrl }}" rel="nofollow" download=""></div>
   {{ if or .Params.imageCredits .Params.imageOrigin }}
     <div id="credits-box">
       <div class="out info" onclick="toggle_info()"><i class="fas fa-info-circle"></i></div>
