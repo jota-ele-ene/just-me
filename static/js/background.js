@@ -13,10 +13,15 @@ function next_bg() {
   if (x.length>0) {
     var i = getRandomArbitrary(0,x.length-1);
     var image = x[i].querySelector('.image');
+    var img = new Image();
     image.style.backgroundImage = "url('"+image.getAttribute("refer");+"')";
-    x[i].classList.toggle("fade_out");
-    x[i].classList.toggle("fading");
-    x[i].classList.toggle("bg_active");
+    img.src = image.getAttribute("refer");
+    if (img.complete) img.onload();
+    img.onload = function() {
+      x[i].classList.toggle("fade_out");
+      x[i].classList.toggle("fading");
+      x[i].classList.toggle("bg_active");
+    }
     //console.log("Choose background " + (i+1) + "/" + x.length);
     setTimeout(setActiveBackground, 1800);
   }
