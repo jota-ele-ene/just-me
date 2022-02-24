@@ -2,7 +2,9 @@
 themesDir = "../../"
 
 # DO NOT REMOVE THIS
-theme = "just-me"
+theme = "just-me"      # use theme locally
+# theme = "github.com/jota-ele-ene/just-me" # use theme as hugo module
+
 # Just me! only renders the homepage, no section or other kinds
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
