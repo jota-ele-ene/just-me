@@ -14,19 +14,30 @@ A minimal and fancy theme for [Hugo](http://gohugo.io/) to create Personal Pages
 
 ## Getting started
 
-The easiest way to get started is to [import this theme in Forestry CMS](https://app.forestry.io/quick-start?repo=jota-ele-ene/just-me-starter&engine=hugo&version=0.81.0&branch=main){:target="_blank"} in a single click
+The easiest way to get started is to [import this theme in Forestry CMS](https://app.forestry.io/quick-start?repo=jota-ele-ene/just-me-starter&engine=hugo&version=0.92.2&branch=main) in a single click.
 
-<a href="https://app.forestry.io/quick-start?repo=jota-ele-ene/just-me-starter&engine=hugo&version=0.81.0&branch=main" target="_blank">
+<a href="https://app.forestry.io/quick-start?repo=jota-ele-ene/just-me-starter&engine=hugo&version=0.92.2&branch=main" target="_blank">
     <img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" />
 </a>
 
-Once the import is complete, you can start to customize your site editing front matter for backgrounds, profiles and home page. They are accesible from the **Forestry** sidebar. If you prefer import it from the command line, go to your Hugo project root folder and run:
+Once the import is complete, you can start to customize your site editing front matter for backgrounds, profiles and home page. They are accessible from the **Forestry** sidebar. If you prefer import it from the command line, go to your Hugo project root folder and run:
+
+Route 1 (traditional): use theme as git submodule
 
 ```bash
 git submodule add https://github.com/jota-ele-ene/just-me.git themes/just-me
 ```
 
-If you already had a site running, change the `theme` variable in your `config.toml` to `just-me`. Besides common variables like `baseURL`, `title`, `languageCode` and `theme`, add two new variables in the `params` section identifying you and a link where anyone can find info about you. These params will be shown in your homepage footer. They should appear in your file like this:
+Route 2 (modern): use theme as hugo module
+
+Attention: [go](https://go.dev/dl/) language needs to be installed
+
+```bash
+hugo mod init github.com/me/just-my-site
+hugo mod get github.com/jota-ele-ene/just-me.git
+```
+
+If you already had a site running, change the `theme` variable in your `config.toml` to `just-me` (route 1) or `github.com/jota-ele-ene/just-me` (route 2). Besides common variables like `baseURL`, `title`, `languageCode` and `theme`, add two new variables in the `params` section identifying you and a link where anyone can find info about you. These params will be shown in your homepage footer. They should appear in your file like this:
 
 ```
 [params]
@@ -42,7 +53,7 @@ You can also add the `ga_tracking_id` param and set your Google Analytics tag.
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 ```
 
-If you don't have a `config.toml` file in your site yet, take a look inside the [`exampleSite`](https://github.com/jota-ele-ene/just-me/tree/master/exampleSite) folder of this theme. You'll find the config file [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) there. The folder also contais the minimum files required to set up your site and have it up & running. Besides the [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) you will find some contents in the `content` folder. Copy the `_index.md` file and the folders `backgrounds` and `profiles` to your site own `content` folder.
+If you don't have a `config.toml` file in your site yet, take a look inside the [`exampleSite`](https://github.com/jota-ele-ene/just-me/tree/master/exampleSite) folder of this theme. You'll find the config file [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) there. The folder also contains the minimum files required to set up your site and have it up & running. Besides the [`config.toml`](https://github.com/jota-ele-ene/just-me/blob/master/exampleSite/config.toml) you will find some contents in the `content` folder. Copy the `_index.md` file and the folders `backgrounds` and `profiles` to your site own `content` folder.
 
 Don't forget to remove the first lines in `config.toml`. The variable `themesDir` only is needed for running the example site.
 
@@ -65,7 +76,7 @@ date: 2022-01-12T19:29:03+01:00
 draft: false
 ---
 
-Yes! You reach my personal page. Welcome here. I'm **John doe**.
+Yes! You reach my personal page. Welcome here. I'm **John Doe**.
 Find me at [Linkedin](#), read some of my thoughts in [my blog](#) or visit my photos at [Flickr](#).
 ```
 
@@ -91,9 +102,9 @@ Consider that:
     title: "Profile for {{ replace .Name "-" " " | title }}"
     # The date the post was created
     date: {{ .Date }}
-    # The URL for accesing your profile
+    # The URL for accessing your profile
     href: #
-    # The estandard draft variable in Hugo
+    # The standard draft variable in Hugo
     draft: false
     # The name for displaying the icon from Font Awesome icon set
     profile: new-profile
@@ -115,7 +126,7 @@ Consider that:
 
 ### Favicon
 
-To update favicon of the site, override the ones in `static/icons/` folder with your own. You can also review the template `partials\head\icons.html` to undertand how they are included in your pages.
+To update favicon of the site, override the ones in `static/icons/` folder with your own. You can also review the template `partials\head\icons.html` to understand how they are included in your pages.
 
 ### Backgrounds
 
@@ -127,7 +138,7 @@ hugo new backgrounds/new-image.md
 
 Review the examples to see the params included in the front-matter. The most important one are the `imageURL` and `imagesize` variables. The theme will use it to set the `image-background` style property for the background. On loading, the theme will build the page including only those backgrounds with the param `draft` set to `false`. Additionally, the scripts will process the `size` param to use only those images that match with the window current orientation (landscape or portrait). After any `resize` event, orientation is re-evaluated.
 
-The rest of the data in the front-matter params will be used to attribute image credits. You can acces them by clicking in the `i` icon on the right-bottom corner of the page.
+The rest of the data in the front-matter params will be used to attribute image credits. You can access them by clicking in the `i` icon on the right-bottom corner of the page.
 
 ## Roadmap
 
@@ -144,7 +155,7 @@ This repo is licensed under the **MIT** license. Check the [LICENSE file](https:
 Thanks to the authors of following resources, among others, used for developing this code:
 
 - [Font Awesome](https://fontawesome.com/), a popular icon set that I use to display the social profiles
-- [Codex](https://github.com/jakewies/hugo-theme-codex/) and [Anenke](https://github.com/theNewDynamic/gohugo-theme-ananke) Hugo themes, that I use as examples of building a theme
+- [Codex](https://github.com/jakewies/hugo-theme-codex/) and [Ananke](https://github.com/theNewDynamic/gohugo-theme-ananke) Hugo themes, that I use as examples of building a theme
 - [Unsplash](https://unsplash.com), the internet’s source of freely-usable images where I have taken the sample backgrounds from
 
 ## Author
